@@ -1,0 +1,20 @@
+<br>
+<div ng-controller="editController">
+    <h3 class="text-danger">Edit friend</h3>
+    <br>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-md-2 control-label">First Name</label>
+            <input type="text" ng-model="friendOne.fname">
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Last Name</label>
+            <input type="text" ng-model="friendOne.lname">
+        </div>
+        <div class="form-group form-inline">
+            <label class="col-md-2 control-label">Birthdate</label>
+            <input type="date" ng-model="friendOne.birthday">
+            <button type="submit" ng-click="update()" class="btn btn-success btn-sm">Create</button>
+        </div>
+    </form>
+</div>

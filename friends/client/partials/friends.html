@@ -1,0 +1,26 @@
+<br>
+<div class="col-md-5" ng-controller='newController'>
+<label>Search Friends:</label>
+<input type="text" ng-model="filter.birthday" placeholder="Filter: Birthday">
+<h3>Friends table</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="active">Name</th>
+      <th class="active">Birthday</th>
+      <th class="active">Show</th>
+      <th class="active">Update</th>
+      <th class="active">Delete</th>
+    </tr>
+  </thead>
+  <tbody>       
+    <tr ng-repeat="f in friends | filter:filter track by $index">
+      <td class="warning">{{f.fname}} {{f.lname}}</td>
+      <td class="warning">{{f.birthday | date}}</td>
+      <td class="warning"><a class="btn btn-primary" href="#/show/{{ f._id }}" role="button">show</a></td>
+      <td class="warning"><a class="btn btn-warning" href="#/edit/{{ f._id }}" role="button">edit</a></td>
+      <td class="warning"><a class="btn btn-danger" ng-click="deleteFriend(f._id)" role="button">delete</a></td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-success" href="#/new">New Friend</a>

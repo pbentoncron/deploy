@@ -1,0 +1,23 @@
+<br>
+<div class="col-md-5" ng-controller="editController">
+    <h3 class="text-danger">{{friendOne.fname}}'s info:</h3>
+    <br>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="active">First Name</th>
+          <th class="active">Last Name</th>
+          <th class="active">Birthday</th>
+          <th class="success">{{friendOne.fname}} joined on:</th>
+        </tr>
+      </thead>
+      <tbody>       
+        <tr>
+          <td class="warning">{{friendOne.fname}}</td>
+          <td class="warning">{{friendOne.lname}}</td>
+          <td class="warning">{{friendOne.birthday | date}}</td>
+          <td class="success">{{friendOne.createdAt | date}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
